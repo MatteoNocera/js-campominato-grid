@@ -25,25 +25,22 @@ const buttonElement = document.querySelector('button');
 
 const grigliaElement = document.getElementById('griglia');
 
-buttonElement.addEventListener('click', function() {
+buttonElement.addEventListener('click', function(e) {
 
-    const click = true;
-
-    if (condition) {
-        
-    } else {
-        
-    }
     console.log('hai cliccato start');
+
+    // rendo invisibile lo start se cliccato
+    buttonElement.classList.add('invisible');
     
     // ciclo
     for (let i = 0; i < 100; i++) {
         // genero una griglia
         const squareNumber = i;
-        //console.log(squareNumber);
+        
+        // costruisco il markup
         const squareMarkup = `<div id="${i + 1}" class="cell d-flex justify-content-center align-items-center text-white border border-white">${squareNumber + 1}</div>`;
 
-        //console.log(squareMarkup);
+        // collego il markup al DOM
         grigliaElement.insertAdjacentHTML('beforeend', squareMarkup);
 
         // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
@@ -56,7 +53,6 @@ buttonElement.addEventListener('click', function() {
         
     }
     
-
 });
 
 
