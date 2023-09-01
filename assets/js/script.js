@@ -27,18 +27,37 @@ const grigliaElement = document.getElementById('griglia');
 
 buttonElement.addEventListener('click', function() {
 
+    const click = true;
+
+    if (condition) {
+        
+    } else {
+        
+    }
     console.log('hai cliccato start');
     
-    // genero una griglia
+    // ciclo
+    for (let i = 0; i < 100; i++) {
+        // genero una griglia
+        const squareNumber = i;
+        //console.log(squareNumber);
+        const squareMarkup = `<div id="${i + 1}" class="cell d-flex justify-content-center align-items-center text-white border border-white">${squareNumber + 1}</div>`;
+
+        //console.log(squareMarkup);
+        grigliaElement.insertAdjacentHTML('beforeend', squareMarkup);
+
+        // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+        const cellElement = document.getElementById(i + 1);
+
+        cellElement.addEventListener('click', function(){
+            console.log('hai cliccato la casella numero ' + (squareNumber + 1));
+            cellElement.classList.toggle('my_bg_palegreen')
+        })
+        
+    }
     
-    const squareMarkup = `<div class="cell d-flex justify-content-center align-items-center text-white border border-white"></div>`;
-
-    grigliaElement.insertAdjacentHTML('beforeend', squareMarkup);
-
-
-
 
 });
 
-// Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+
 
