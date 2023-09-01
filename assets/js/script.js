@@ -16,3 +16,29 @@ Confermate lettura come al solito e buon divertimento :baby-yoda:
 
 */
 
+// L'utente clicca su un bottone che genererà una griglia
+//markup = <div class="cell d-flex justify-content-center align-items-center text-white border border-white"></div>
+
+// individuo il button sulla DOM
+
+const buttonElement = document.querySelector('button');
+
+const grigliaElement = document.getElementById('griglia');
+
+buttonElement.addEventListener('click', function() {
+
+    console.log('hai cliccato start');
+    
+    // genero una griglia
+    
+    const squareMarkup = `<div class="cell d-flex justify-content-center align-items-center text-white border border-white"></div>`;
+
+    grigliaElement.insertAdjacentHTML('beforeend', squareMarkup);
+
+
+
+
+});
+
+// Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+

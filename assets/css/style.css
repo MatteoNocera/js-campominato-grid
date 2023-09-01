@@ -1,0 +1,12 @@
+#griglia {
+
+}
+
+.cell {
+    width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+}
+
+.my_bg_palegreen {
+    background-color: palegreen;
+}
