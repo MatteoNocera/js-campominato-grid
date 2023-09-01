@@ -21,16 +21,24 @@ Confermate lettura come al solito e buon divertimento :baby-yoda:
 
 // individuo il button sulla DOM
 
-const buttonElement = document.querySelector('button');
+const startElement = document.getElementById('start');
+
+const restartElement = document.getElementById('restart');
 
 const grigliaElement = document.getElementById('griglia');
 
-buttonElement.addEventListener('click', function(e) {
+startElement.addEventListener('click', function(e) {
 
     console.log('hai cliccato start');
 
     // rendo invisibile lo start se cliccato
-    buttonElement.classList.add('invisible');
+    startElement.classList.add('d-none');
+    restartElement.classList.remove('d-none');
+
+    // ricarico la pagina se clicco restart
+    restartElement.addEventListener('click', function() {
+        location.reload()
+    })
     
     // ciclo
     for (let i = 0; i < 100; i++) {
@@ -48,7 +56,7 @@ buttonElement.addEventListener('click', function(e) {
 
         cellElement.addEventListener('click', function(){
             console.log('hai cliccato la casella numero ' + (squareNumber + 1));
-            cellElement.classList.toggle('my_bg_palegreen')
+            cellElement.classList.toggle('bg-primary')
         })
         
     }

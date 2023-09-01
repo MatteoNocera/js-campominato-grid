@@ -1,5 +1,7 @@
 #griglia {
-
+    max-width: 800px;
+    aspect-ratio: 1 / 1;
+    padding: 0 3rem;
 }
 
 .cell {
@@ -7,6 +9,3 @@
     aspect-ratio: 1 / 1;
 }
 
-.my_bg_palegreen {
-    background-color: palegreen;
-}
